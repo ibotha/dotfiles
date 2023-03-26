@@ -1,7 +1,7 @@
 # ~/.config/starship.toml
 
 # Inserts a blank line between shell prompts
-add_newline = false
+add_newline = true
 
 palette = 'dracula'
 
@@ -174,7 +174,7 @@ format = ' $symbol ($version) '
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = ' ♥ $time '
+format = ' $time '
 
 [package]
 format = " $symbol$version"
