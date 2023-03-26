@@ -1,0 +1,181 @@
+# ~/.config/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+palette = 'dracula'
+
+# Change the default prompt format
+format = """
+[](host)\
+[$os\
+$username](bold bg:host fg:white)\
+[](bg:path fg:host)\
+[$directory](bold bg:path fg:white)\
+[](fg:path bg:git)\
+[$git_branch\
+$git_status](bold bg:git fg:white)\
+[](fg:git bg:package)\
+[$all\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala](bold bg:package fg:white)\
+[](fg:package bg:docker)\
+[$docker_context](bold bg:docker fg:white)\
+[](fg:docker bg:time)\
+[$time](bold bg:time fg:white)\
+[ ](fg:time)\
+$line_break\
+$character\
+"""
+
+# Dracula theme colours: https://github.com/dracula/dracula-theme
+[palettes.dracula]
+# Palette			Hex
+host =                          '#c52a6b'
+path =                          '#c35b3c'
+git =                           '#c27028'
+package =                       '#b8555c'
+docker =                        '#a72bac'
+time =                          '#3b42d5'
+white =                         '#FFFFFF'
+background =		        '#282a36'
+current_line =		        '#44475a'
+selection =			'#44475a'
+foreground =		        '#f8f8f2'
+comment =			'#6272a4'
+
+# Change the default prompt characters
+[character]
+success_symbol = "[](blue bold)"
+error_symbol = "[](red bold)"
+
+# Shows an icon that should be included by zshrc script based on the distribution or os
+[os]
+format = "$symbol "
+disabled = false
+
+[os.symbols]
+Windows = ""
+
+# Shows the username
+[username]
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = "$user "
+disabled = true  # disable in powershell
+show_always = false
+
+[directory]
+truncation_length = 3
+style = "bg:#DA627D"
+truncation_symbol = "…/"
+home_symbol = ""
+read_only_style = "197"
+read_only = "  "
+format = " $path$read_only "
+
+[git_branch]
+symbol = " "
+format = " $symbol$branch "
+truncation_length = 3
+truncation_symbol = "…/"
+style = "bg:#FCA17D"
+
+[git_status]
+format = ' $all_status$ahead_behind '
+style = "bg:#FCA17D"
+conflicted = "🏳"
+up_to_date = " "
+untracked = " "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = " "
+modified = " "
+staged = '++\($count\)'
+renamed = "襁 "
+deleted = " "
+
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = ' $symbol $context  $path'
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[golang]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[gradle]
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[java]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[julia]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[nodejs]
+symbol = ""
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[nim]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[scala]
+symbol = " "
+style = "bg:#86BBD8"
+format = ' $symbol ($version) '
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = ' ♥ $time '
+
+[package]
+format = " $symbol$version"
+symbol = " "
