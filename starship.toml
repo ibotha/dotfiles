@@ -3,7 +3,7 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-palette = 'dracula'
+palette = 'cyberpunk'
 
 # Change the default prompt format
 format = """
@@ -32,14 +32,14 @@ $scala](bold bg:package fg:white)\
 [](fg:package bg:docker)\
 [$docker_context](bold bg:docker fg:white)\
 [](fg:docker bg:time)\
-[$time](bold bg:time fg:white)\
+[$time\
+$cmd_duration](bold bg:time fg:white)\
 [ ](fg:time)\
 $line_break\
 $character\
 """
 
-# Dracula theme colours: https://github.com/dracula/dracula-theme
-[palettes.dracula]
+[palettes.cyberpunk]
 # Palette			Hex
 host =                          '#c52a6b'
 path =                          '#c35b3c'
@@ -72,7 +72,7 @@ Windows = ""
 style_user = "bg:#9A348E"
 style_root = "bg:#9A348E"
 format = "$user "
-disabled = true  # disable in powershell
+disabled = false # disable in powershell
 show_always = false
 
 [directory]
@@ -179,3 +179,6 @@ format = ' $time '
 [package]
 format = " $symbol$version"
 symbol = " "
+
+[cmd_duration]
+format = " $duration "
