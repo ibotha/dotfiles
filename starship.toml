@@ -18,8 +18,7 @@ $username](bold bg:host fg:white)\
 [$git_metrics\
 $git_status](bold bg:git_status fg:white)\
 [](fg:git_status bg:package)\
-[$all\
-$c\
+([$c\
 $elixir\
 $elm\
 $golang\
@@ -30,10 +29,10 @@ $julia\
 $nodejs\
 $nim\
 $rust\
-$scala](bold bg:package fg:white)\
-[](fg:package bg:docker)\
-[$docker_context](bold bg:docker fg:white)\
-[](fg:docker bg:time)\
+$scala ](bold bg:package fg:white))\
+[](fg:package bg:all)\
+([$all$docker_context ](bold bg:all fg:white))\
+[](fg:all bg:time)\
 [$time\
 $cmd_duration](bold bg:time fg:white)\
 [ ](fg:time)\
@@ -48,7 +47,7 @@ path =                          '#c44056'
 git_branch =                    '#c35d3a'
 git_status =                    '#d17625'
 package =                       '#9d23c0'
-docker =                        '#7131c9'
+all =                        '#7131c9'
 time =                          '#3b42d5'
 white =                         '#FFFFFF'
 background =		        '#282a36'
@@ -116,7 +115,7 @@ only_nonzero_diffs = true
 [c]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [docker_context]
 symbol = " "
@@ -126,56 +125,56 @@ format = ' $symbol $context  $path'
 [elixir]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [elm]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [golang]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [gradle]
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [haskell]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [java]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [julia]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [nodejs]
 symbol = ""
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [nim]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [rust]
 symbol = ""
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [scala]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version) '
+format = ' $symbol ($version)'
 
 [time]
 disabled = false
