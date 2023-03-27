@@ -188,3 +188,7 @@ symbol = " "
 
 [cmd_duration]
 format = " $duration "
+
+[lua]
+symbol = "󰢱"
+format = " $symbol"
