@@ -3,7 +3,7 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
-palette = 'cyberpunk'
+palette = 'forest'
 
 # Change the default prompt format
 format = """
@@ -40,6 +40,22 @@ $line_break\
 $character\
 """
 
+[palettes.forest]
+# Palette			Hex
+host =                          '#744525'
+path =                          '#9b5b31'
+git_branch =                    '#899b31'
+git_status =                    '#5b9b31'
+package =                       '#608448'
+all =                           '#798e6b'
+time =                          '#8f8f8f'
+white =                         '#FFFFFF'
+background =		        '#282a36'
+current_line =		        '#44475a'
+selection =			'#44475a'
+foreground =		        '#f8f8f2'
+comment =			'#6272a4'
+
 [palettes.cyberpunk]
 # Palette			Hex
 host =                          '#c52a6b'
@@ -47,7 +63,7 @@ path =                          '#c44056'
 git_branch =                    '#c35d3a'
 git_status =                    '#d17625'
 package =                       '#9d23c0'
-all =                        '#7131c9'
+all =                           '#7131c9'
 time =                          '#3b42d5'
 white =                         '#FFFFFF'
 background =		        '#282a36'
@@ -59,7 +75,7 @@ comment =			'#6272a4'
 # Change the default prompt characters
 [character]
 success_symbol = "[](blue bold)"
-error_symbol = "[ $](red bold)"
+error_symbol = "[ ](red bold)"
 
 # Shows an icon that should be included by zshrc script based on the distribution or os
 [os]
@@ -115,12 +131,20 @@ only_nonzero_diffs = true
 [c]
 symbol = " "
 style = "bg:#86BBD8"
-format = ' $symbol ($version)'
+format = ' $symbol( $version)'
+
+[dotnet]
+symbol = "󰌛"
+format = ' $symbol$version( \($tfm\))'
 
 [docker_context]
 symbol = " "
 style = "bg:#06969A"
 format = ' $symbol $context  $path'
+
+[python]
+symbol = ""
+format = " $symbol( $version)"
 
 [elixir]
 symbol = " "
